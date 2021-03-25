@@ -9,7 +9,7 @@ dest=/downloads
 for folder in "elrepo" "kernel"
 do
 	arch_src="$src/$folder/${version}"
-	arch_dest="$dest/$folder/$version"
+	arch_dest="$dest"
 	mkdir -p "$arch_dest"
 	wget \
 		--mirror -nH --cut-dirs=1 --convert-links --adjust-extension --page-requisites --no-parent \

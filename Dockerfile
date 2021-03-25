@@ -2,4 +2,4 @@
 
 FROM debian:buster-slim
 
-RUN apt update && apt install perl wget --no-install-recommends -y
+RUN apt update && apt install wget --no-install-recommends -y

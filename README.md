@@ -49,13 +49,13 @@ To point your ElRepo clients to your mirror, create a `/etc/yum.repos.d/local-el
 [mymirror-elrepo-base]
 name=My CentOS 7 EPEL local mirror for os packages
 baseurl=http://192.168.0.24:10082/kernel/el7/kernel/el7/$basearch/
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org
 enabled=1
 
 [mymirror-elrepo-base]
 name=My CentOS 7 EPEL local mirror for os packages
 baseurl=http://192.168.0.24:10082/kernel/el7/kernel/el7/$basearch/
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-elrepo.org
 enabled=1
 ```
 

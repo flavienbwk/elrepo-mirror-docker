@@ -6,6 +6,10 @@ version="el7"
 src=http://mirrors.coreix.net/elrepo
 dest=/downloads
 
+# Getting gpgkey
+wget -v https://www.elrepo.org/RPM-GPG-KEY-elrepo.org -P "$dest"
+
+# Downloading mirror
 for folder in "elrepo" "kernel"
 do
 	arch_src="$src/$folder/${version}"

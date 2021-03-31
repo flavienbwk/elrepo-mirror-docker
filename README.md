@@ -36,9 +36,28 @@
 
 ## Client configuration
 
+On you server, retrieve and add the GPG key :
+
+```bash
+wget http://192.168.0.24:10082/RPM-GPG-KEY-elrepo.org
+rpm --import RPM-GPG-KEY-elrepo.org
+```
+
 To point your ElRepo clients to your mirror, create a `/etc/yum.repos.d/local-elrepo-mirror.repo` file as follow :
 
-_TO DO_
+```conf
+[mymirror-elrepo-base]
+name=My CentOS 7 EPEL local mirror for os packages
+baseurl=http://192.168.0.24:10082/kernel/el7/kernel/el7/$basearch/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+enabled=1
+
+[mymirror-elrepo-base]
+name=My CentOS 7 EPEL local mirror for os packages
+baseurl=http://192.168.0.24:10082/kernel/el7/kernel/el7/$basearch/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+enabled=1
+```
 
 :point_right: Feel free to add a reverse proxy or update the [nginx configuration file](./nginx.conf) to secure the mirror with SSL/TLS  
 :point_right: Feel free to send **pull requests** as well !
